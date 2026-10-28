@@ -1,59 +1,55 @@
 # ShareX screenshot setup
 
-One script that sets up [ShareX](https://getsharex.com) for fast, good-looking screenshots. No account needed.
+This is the material for a 5-minute demo about taking screenshots. The nice part: if you like how it works, you can copy every setting in one go with a single prompt. No account needed.
 
-## Quick start
+![Slide 1: four shortcuts](images/slide-1-shortcuts.png)
 
-1. Open [PROMPT.md](PROMPT.md), copy the prompt into an AI agent that can run PowerShell, and let it run.
-2. Or run it yourself in Windows PowerShell:
+![Slide 2: why ShareX and how to try it](images/slide-2-why-and-try.png)
+
+The slides as a PowerPoint: [ShareX mini training.pptx](<ShareX mini training.pptx>)
+
+## Try it yourself
+
+Open [PROMPT.md](PROMPT.md), paste the prompt into an AI agent that can run PowerShell, and let it work. Prefer to do it by hand? Run this in Windows PowerShell:
 
 ```powershell
 powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\Setup-ShareX.ps1
 ```
 
-The script:
+Before it changes anything, the script backs up your current ShareX settings (`Backup\SetupBackup_<timestamp>` in your ShareX folder). It installs ShareX with `winget` only when you don't have it yet, and it starts ShareX with Windows, tray only. Only the settings listed below are touched, everything else stays as it was. Run it twice and nothing breaks.
 
-- **backs up** your current ShareX settings first (`Backup\SetupBackup_<timestamp>` in your ShareX folder),
-- installs ShareX with `winget` **only if it is not installed yet**,
-- starts ShareX with Windows (tray only),
-- changes only the settings below; everything else is left alone. Running it again is safe.
+## The four shortcuts
 
-Training slides (two slides, English): [ShareX mini training.pptx](<ShareX mini training.pptx>).
+| Shortcut | What happens | Handy for |
+|---|---|---|
+| Ctrl+Shift+1 | Drag an area, pick a frame, annotate, Enter | Sharing something with context, or playing with the frames |
+| Ctrl+Shift+2 | Drag an area, get the grey rounded border, annotate, Enter | A screenshot with arrows for a mail |
+| Ctrl+Shift+3 | Drag an area, border, straight to the clipboard | A quick bug in Cube that you want an AI to look at |
+| Ctrl+Shift+4 | Scrolling capture: pick a window, get one long image | A long DataMiner Assistant chat or web page |
 
-More to explore, all built into ShareX: OCR (tray icon, under Capture), Blur and Pixelate in the editor, Shift+PrintScreen for a screen recording and Ctrl+Shift+PrintScreen for a GIF.
-
-## What you get
-
-| Hotkey | What it does |
-|---|---|
-| **Ctrl+Shift+1** | Select an area, **pick a frame**, annotate, Enter |
-| **Ctrl+Shift+2** | Select an area, default frame (rounded grey border), annotate, Enter |
-| **Ctrl+Shift+3** | Select an area, default frame, straight to the clipboard. Fastest, ideal for pasting into AI |
-| **Ctrl+Shift+4** | Scrolling capture: pick a window and a long web page becomes one image, straight to the clipboard |
+A few things apply to all of them:
 
 - No capture sound, and no "unsaved changes" question when you close the editor.
-- Annotations look the same for everyone: pink-red arrows and rectangles with rounded corners, thin text, blur 11 and pixelate 7.
-- Every screenshot is copied to the clipboard and saved in `Documents\ShareX\Screenshots\<year-month>`.
-- 10 frames: No effect, Rounded grey border (default), Blue border, Blue glow, Green border, Green glow,
-  Gold border, Gold wavy edge, Red torn edge, Pill shape.
+- Annotations look the same for everyone: pink-red arrows and rectangles with rounded corners, thin text, blur 11, pixelate 7.
+- Every screenshot lands on the clipboard and in `Documents\ShareX\Screenshots\<year-month>`.
+- There are 10 frames: No effect, Rounded grey border (the default), Blue border, Blue glow, Green border, Green glow, Gold border, Gold wavy edge, Red torn edge and Pill shape.
 
-## Editor tips
+## In the editor
 
-`A` arrow, `T` text, `R` rectangle, `Ctrl+D` duplicate the selected shape, `Enter` copy + save, `Esc` discard.
+`A` is an arrow, `T` is text, `R` is a rectangle, `Ctrl+D` duplicates the selected shape. `Enter` copies and saves, `Esc` throws the screenshot away.
 
-Also turn on Windows clipboard history with **Windows+V**: take several screenshots and paste the one you need.
+One more trick: switch on Windows clipboard history with Windows+V. Take a few screenshots, then paste the one you need.
 
 ## Why ShareX
 
-Free, open source and actively maintained (unlike Greenshot). The grey rounded border looks good in e-mails,
-and the region capture shows the edges of e.g. your browser window.
+It's free, open source and still updated. The grey border looks tidy in a mail, and region capture keeps the edges of your browser window visible. Snagit costs money and the Snipping Tool is fairly basic.
+
+There's more in there that the demo skips: OCR (tray icon, under Capture), Blur and Pixelate in the editor, Shift+PrintScreen for a screen recording and Ctrl+Shift+PrintScreen for a GIF.
 
 ## Undo
 
-Close ShareX (tray, Exit), copy the files from `Backup\SetupBackup_<timestamp>` back into the ShareX folder
-(`Documents\ShareX`), and start ShareX.
+Close ShareX (tray, Exit), copy the files from `Backup\SetupBackup_<timestamp>` back into the ShareX folder (`Documents\ShareX`), and start ShareX again.
 
 ## Requirements
 
-Windows 10/11 with Windows PowerShell 5.1 (built in). `winget` is only needed when ShareX is not installed.
-Tested with ShareX 21.
+Windows 10 or 11 with Windows PowerShell 5.1, which is built in. `winget` is only needed if ShareX isn't installed yet. Tested with ShareX 21.
