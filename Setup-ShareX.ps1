@@ -1,6 +1,6 @@
 ﻿<#
 .SYNOPSIS
-    Sets up ShareX the way Joachim uses it: three screenshot hotkeys, rounded grey border, no sound,
+    Sets up ShareX the way Joachim uses it: four screenshot hotkeys, rounded grey border, no sound,
     no "unsaved changes" prompt when closing the editor.
 
 .DESCRIPTION
@@ -9,6 +9,7 @@
     - Ctrl+Shift+1  area capture -> choose a frame -> annotate -> Enter
     - Ctrl+Shift+2  area capture -> default frame (rounded grey border) -> annotate -> Enter
     - Ctrl+Shift+3  area capture -> default frame -> straight to clipboard + file
+    - Ctrl+Shift+4  scrolling capture (long web page in one image) -> clipboard + file
     - Installs 10 image-effect presets ("frames"); the default is "Rounded grey border".
     - Capture sound off, editor exit confirmation off, ShareX starts with Windows (tray only).
     - Annotation look: pink-red arrows/rectangles with rounded corners, thin text, blur 11, pixelate 7.
@@ -198,8 +199,8 @@ $surface['SelectedImageEffectPreset'] = 0
 # Screenshot backup folder: <ShareX folder>\Screenshots\<yyyy-mm>
 $app['SaveImageSubFolderPattern'] = '%y-%mo'
 
-# Hotkeys: replace only our three, keep everything else
-$ours = @('D1, Shift, Control', 'D2, Shift, Control', 'D3, Shift, Control')
+# Hotkeys: replace only our four, keep everything else
+$ours = @('D1, Shift, Control', 'D2, Shift, Control', 'D3, Shift, Control', 'D4, Shift, Control')
 $list = New-Object System.Collections.ArrayList
 if ($hotkeys.ContainsKey('Hotkeys') -and $hotkeys['Hotkeys']) {
     foreach ($entry in $hotkeys['Hotkeys']) {
@@ -207,13 +208,13 @@ if ($hotkeys.ContainsKey('Hotkeys') -and $hotkeys['Hotkeys']) {
     }
 }
 
-function New-Hotkey([string]$Key, [string]$Description, [string]$AfterCapture, $ImageSettings) {
+function New-Hotkey([string]$Key, [string]$Description, [string]$AfterCapture, $ImageSettings, [string]$Job = 'RectangleRegion') {
     $info = New-Dict
     $info['Hotkey'] = $Key
     $info['Win'] = $false
     $ts = New-Dict
     $ts['Description'] = $Description
-    $ts['Job'] = 'RectangleRegion'
+    $ts['Job'] = $Job
     $ts['UseDefaultAfterCaptureJob'] = $false
     $ts['AfterCaptureJob'] = $AfterCapture
     if ($ImageSettings) {
@@ -232,6 +233,7 @@ $chooser['ShowImageEffectsWindowAfterCapture'] = $true
 [void]$list.Add((New-Hotkey 'D1, Shift, Control' 'Region + choose frame and edit' $AfterCaptureEdit $chooser))
 [void]$list.Add((New-Hotkey 'D2, Shift, Control' 'Region + default frame and edit' $AfterCaptureEdit $null))
 [void]$list.Add((New-Hotkey 'D3, Shift, Control' 'Region + default frame, quick copy and save' $AfterCaptureQuick $null))
+[void]$list.Add((New-Hotkey 'D4, Shift, Control' 'Scrolling capture, quick copy and save' $AfterCaptureQuick $null 'ScrollingCapture'))
 $hotkeys['Hotkeys'] = $list.ToArray()
 
 Save-Json $app $appPath
@@ -242,7 +244,7 @@ $checkApp = Read-Json $appPath
 $checkHotkeys = Read-Json $hotkeysPath
 $found = @($checkHotkeys['Hotkeys'] | Where-Object { $ours -contains [string]$_['HotkeyInfo']['Hotkey'] }).Count
 $checkDts = $checkApp['DefaultTaskSettings']
-$ok = ($found -eq 3) `
+$ok = ($found -eq 4) `
     -and ($checkDts['ImageSettings']['ImageEffectPresets'].Count -eq $presets.Count) `
     -and ($checkDts['ToolsSettings']['ImageEditorOptions']['ShowExitConfirmation'] -eq $false) `
     -and ($checkDts['ToolsSettings']['ImageEditorOptions']['BorderColorHex'] -eq '#FFEA005E') `
@@ -280,6 +282,7 @@ Write-Host 'Done. Try it:' -ForegroundColor Green
 Write-Host '  Ctrl+Shift+1  area + pick a frame + annotate, then Enter'
 Write-Host '  Ctrl+Shift+2  area + grey border + annotate, then Enter'
 Write-Host '  Ctrl+Shift+3  area + grey border, straight to clipboard'
+Write-Host '  Ctrl+Shift+4  scrolling capture: pick a window, a long page becomes one image'
 Write-Host 'Annotate: A = arrow, T = text, R = rectangle, Ctrl+D = duplicate. Enter = copy + save, Esc = discard.'
 Write-Host "Every screenshot is also saved in: $shots\<year-month>"
 Write-Host "Backup of your old settings: $backupDir"

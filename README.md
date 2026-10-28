@@ -20,7 +20,7 @@ The script:
 
 Training slides (two slides, English): [ShareX mini training.pptx](<ShareX mini training.pptx>).
 
-More to explore, all built into ShareX: OCR and scrolling capture (tray icon, under Capture), Blur and Pixelate in the editor, Shift+PrintScreen for a screen recording and Ctrl+Shift+PrintScreen for a GIF.
+More to explore, all built into ShareX: OCR (tray icon, under Capture), Blur and Pixelate in the editor, Shift+PrintScreen for a screen recording and Ctrl+Shift+PrintScreen for a GIF.
 
 ## What you get
 
@@ -29,6 +29,7 @@ More to explore, all built into ShareX: OCR and scrolling capture (tray icon, un
 | **Ctrl+Shift+1** | Select an area, **pick a frame**, annotate, Enter |
 | **Ctrl+Shift+2** | Select an area, default frame (rounded grey border), annotate, Enter |
 | **Ctrl+Shift+3** | Select an area, default frame, straight to the clipboard. Fastest, ideal for pasting into AI |
+| **Ctrl+Shift+4** | Scrolling capture: pick a window and a long web page becomes one image, straight to the clipboard |
 
 - No capture sound, and no "unsaved changes" question when you close the editor.
 - Annotations look the same for everyone: pink-red arrows and rectangles with rounded corners, thin text, blur 11 and pixelate 7.
