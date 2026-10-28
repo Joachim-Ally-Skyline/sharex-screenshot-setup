@@ -18,6 +18,8 @@ The script:
 - starts ShareX with Windows (tray only),
 - changes only the settings below; everything else is left alone. Running it again is safe.
 
+Training slides (two slides, English): [ShareX mini training.pptx](<ShareX mini training.pptx>).
+
 ## What you get
 
 | Hotkey | What it does |
