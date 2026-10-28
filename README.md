@@ -27,6 +27,7 @@ The script:
 | **Ctrl+Shift+3** | Select an area, default frame, straight to the clipboard. Fastest, ideal for pasting into AI |
 
 - No capture sound, and no "unsaved changes" question when you close the editor.
+- Annotations look the same for everyone: pink-red arrows and rectangles with rounded corners, thin text, blur 11 and pixelate 7.
 - Every screenshot is copied to the clipboard and saved in `Documents\ShareX\Screenshots\<year-month>`.
 - 10 frames: No effect, Rounded grey border (default), Blue border, Blue glow, Green border, Green glow,
   Gold border, Gold wavy edge, Red torn edge, Pill shape.

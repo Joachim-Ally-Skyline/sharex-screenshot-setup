@@ -11,6 +11,7 @@
     - Ctrl+Shift+3  area capture -> default frame -> straight to clipboard + file
     - Installs 10 image-effect presets ("frames"); the default is "Rounded grey border".
     - Capture sound off, editor exit confirmation off, ShareX starts with Windows (tray only).
+    - Annotation look: pink-red arrows/rectangles with rounded corners, thin text, blur 11, pixelate 7.
     Other hotkeys and settings are left alone. Safe to run more than once.
     Run with Windows PowerShell 5.1:  powershell.exe -ExecutionPolicy Bypass -File .\Setup-ShareX.ps1
 
@@ -177,6 +178,15 @@ $general['PlaySoundAfterAction'] = $false
 $editor = Get-Child (Get-Child $dts 'ToolsSettings') 'ImageEditorOptions'
 $editor['ShowExitConfirmation'] = $false
 
+# Annotation look: pink-red shapes with rounded corners, thin non-bold text, tuned blur and pixelate
+$editor['BorderColorHex'] = '#FFEA005E'
+$editor['TextBorderColorHex'] = '#FFEA005E'
+$editor['CornerRadius'] = 15
+$editor['TextThickness'] = 4
+$editor['TextBold'] = $false
+$editor['BlurStrength'] = [double]11
+$editor['PixelateStrength'] = [double]7
+
 # Frames: ShareX keeps a separate list for the default settings and for the editor's effects button
 $imageSettings = Get-Child $dts 'ImageSettings'
 $imageSettings['ImageEffectPresets'] = Copy-Json $presets
@@ -235,6 +245,7 @@ $checkDts = $checkApp['DefaultTaskSettings']
 $ok = ($found -eq 3) `
     -and ($checkDts['ImageSettings']['ImageEffectPresets'].Count -eq $presets.Count) `
     -and ($checkDts['ToolsSettings']['ImageEditorOptions']['ShowExitConfirmation'] -eq $false) `
+    -and ($checkDts['ToolsSettings']['ImageEditorOptions']['BorderColorHex'] -eq '#FFEA005E') `
     -and ($checkDts['GeneralSettings']['PlaySoundAfterCapture'] -eq $false)
 if (-not $ok) { throw "Verification failed. Restore your settings from $backupDir" }
 Write-Host 'Settings written and verified.' -ForegroundColor Green
