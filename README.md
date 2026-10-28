@@ -38,7 +38,7 @@ A few things apply to all of them:
 
 ## In the editor
 
-`A` is an arrow, `T` is text, `R` is a rectangle, `Ctrl+D` duplicates the selected shape. `Enter` copies and saves, `Esc` throws the screenshot away.
+`A` is an arrow, `T` is text, `R` is a rectangle, `Ctrl+D` duplicates the selected shape. `Enter` copies and saves. The editor also copies the image to your clipboard by itself while you work, so a screenshot is never lost, even if you close the editor with `Esc`.
 
 One more trick: switch on Windows clipboard history with Windows+V. Take a few screenshots, then paste the one you need.
 

@@ -178,6 +178,8 @@ $general['PlaySoundAfterAction'] = $false
 # No "unsaved changes" question when closing the image editor
 $editor = Get-Child (Get-Child $dts 'ToolsSettings') 'ImageEditorOptions'
 $editor['ShowExitConfirmation'] = $false
+# The editor copies the image to the clipboard itself, so Esc still leaves a screenshot there
+$editor['AutoCopyImageToClipboard'] = $true
 
 # Annotation look: pink-red shapes with rounded corners, thin non-bold text, tuned blur and pixelate
 $editor['BorderColorHex'] = '#FFEA005E'
@@ -250,6 +252,7 @@ $checkDts = $checkApp['DefaultTaskSettings']
 $ok = ($found -eq 4) `
     -and ($checkDts['ImageSettings']['ImageEffectPresets'].Count -eq $presets.Count) `
     -and ($checkDts['ToolsSettings']['ImageEditorOptions']['ShowExitConfirmation'] -eq $false) `
+    -and ($checkDts['ToolsSettings']['ImageEditorOptions']['AutoCopyImageToClipboard'] -eq $true) `
     -and ($checkDts['ToolsSettings']['ImageEditorOptions']['BorderColorHex'] -eq '#FFEA005E') `
     -and ($checkDts['GeneralSettings']['PlaySoundAfterCapture'] -eq $false)
 if (-not $ok) { throw "Verification failed. Restore your settings from $backupDir" }
