@@ -134,7 +134,7 @@ $ser.RecursionLimit = 1000
 
 function Read-Json([string]$Path) { $ser.DeserializeObject([IO.File]::ReadAllText($Path)) }
 # PowerShell wraps objects that pass through functions in PSObject, which the serializer cannot handle.
-function Unwrap($Value) { if ($null -eq $Value) { return $null }; return $Value.PSObject.BaseObject }
+function Unwrap($Value) { if ($null -eq $Value) { return $null }; $base = $Value.PSObject.BaseObject; return , $base }
 function ConvertTo-Plain($Value) {
     $Value = Unwrap $Value
     if ($Value -is [System.Collections.IDictionary]) {
@@ -217,6 +217,9 @@ function New-Hotkey([string]$Key, [string]$Description, [string]$AfterCapture, $
     $ts['Job'] = $Job
     $ts['UseDefaultAfterCaptureJob'] = $false
     $ts['AfterCaptureJob'] = $AfterCapture
+    # ShareX dereferences these lists at startup and fails when they are missing
+    $ts['ExternalPrograms'] = New-Object System.Collections.ArrayList
+    $ts['WatchFolderList'] = New-Object System.Collections.ArrayList
     if ($ImageSettings) {
         $ts['UseDefaultImageSettings'] = $false
         $ts['ImageSettings'] = $ImageSettings
