@@ -20,6 +20,8 @@ The script:
 
 Training slides (two slides, English): [ShareX mini training.pptx](<ShareX mini training.pptx>).
 
+More to explore, all built into ShareX: OCR and scrolling capture (tray icon, under Capture), Blur and Pixelate in the editor, Shift+PrintScreen for a screen recording and Ctrl+Shift+PrintScreen for a GIF.
+
 ## What you get
 
 | Hotkey | What it does |
