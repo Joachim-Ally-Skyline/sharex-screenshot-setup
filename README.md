@@ -32,9 +32,9 @@ A few things apply to all of them:
 - No capture sound, and no "unsaved changes" question when you close the editor.
 - Annotations look the same for everyone: pink-red arrows and rectangles with rounded corners, thin text, blur 11, pixelate 7.
 - Every screenshot lands on the clipboard and in `Documents\ShareX\Screenshots\<year-month>`.
-- There are 25 frames in Ctrl+Shift+1, ordered from neutral to a bit silly. The default is Rounded grey border. Further down you get a thin dark border, glows, a Polaroid, a torn paper edge, RGB glitch and even Upside down.
+- There are 35 frames in Ctrl+Shift+1, ordered from neutral to a bit silly. The default is Rounded grey border. Further down you get a thin dark border, glows, a Polaroid, a torn paper edge, RGB glitch, what (meme) and even Upside down.
 
-![All 25 frames](images/frames-overview.png)
+![All 35 frames](images/frames-overview.png)
 
 ## In the editor
 
