@@ -1,6 +1,6 @@
 # ShareX screenshot setup
 
-This is the material for a 5-minute demo about taking screenshots. The nice part: if you like how it works, you can copy every setting in one go with a single prompt. No account needed.
+This is the material for a 5-minute demo about taking screenshots with [ShareX](https://getsharex.com). The nice part: if you like how it works, you can copy every setting in one go with a single prompt. No account needed.
 
 ![Slide 1: four shortcuts](images/slide-1-shortcuts.png)
 
@@ -34,7 +34,7 @@ A few things apply to all of them:
 - Every screenshot lands on the clipboard and in `Documents\ShareX\Screenshots\<year-month>`.
 - There are 35 frames in Ctrl+Shift+1, ordered from neutral to a bit silly. The default is Rounded grey border. Further down you get a thin dark border, glows, a Polaroid, a torn paper edge, RGB glitch, what (meme) and even Upside down.
 
-![All 35 frames](images/frames-overview.png)
+![All 35 frames](images/frames-35-overview.png)
 
 ## In the editor
 
@@ -44,7 +44,7 @@ One more trick: switch on Windows clipboard history with Windows+V. Take a few s
 
 ## Why ShareX
 
-It's free, open source and still updated. The grey border looks tidy in a mail, and region capture keeps the edges of your browser window visible. Snagit costs money and the Snipping Tool is fairly basic.
+[ShareX](https://getsharex.com) is free, open source and still updated. The grey border looks tidy in a mail, and region capture keeps the edges of your browser window visible. Snagit costs money and the Snipping Tool is fairly basic.
 
 There's more in there that the demo skips: OCR (tray icon, under Capture), Blur and Pixelate in the editor, Shift+PrintScreen for a screen recording and Ctrl+Shift+PrintScreen for a GIF.
 
