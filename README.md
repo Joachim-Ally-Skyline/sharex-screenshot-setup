@@ -62,8 +62,18 @@ irm https://raw.githubusercontent.com/Joachim-Ally-Skyline/sharex-screenshot-set
 
 Short walkthrough videos are available in the [`videos/`](videos/) folder:
 - [**DataMiner Assistant conversation (Ctrl+Shift+4)**](videos/ShareX%20-%20Ctrl+Shift+4%20DataMiner%20Assistant%20conversation.mp4): Captures a long AI conversation spanning multiple screens into one crisp image.
+
+
+https://github.com/user-attachments/assets/ec604016-643f-4fc1-a2f9-cbd27a033490
+
 - [**Quick customer screenshot with arrows (Ctrl+Shift+2)**](videos/ShareX%20-%20Ctrl+Shift+2%20quick%20screenshot%20for%20a%20customer.mp4): Capture, draw an arrow, add a note, press Enter, paste into Outlook.
+
+
+https://github.com/user-attachments/assets/c8935811-1825-4c4c-8e12-28124dd0419b
+
 - [**Install in one prompt**](videos/ShareX%20-%20install%20in%20one%20prompt.mp4): Watch an agent run the setup script end-to-end.
+
+https://github.com/user-attachments/assets/bfdf23c8-f08b-4032-968b-d5381f144218
 
 ---
 
