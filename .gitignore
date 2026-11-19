@@ -1,0 +1,3 @@
+# Raw screen recordings (large files, keep out of git history)
+raw/
+*.wmv

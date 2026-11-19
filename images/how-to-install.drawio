@@ -1,0 +1,83 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="install-guide" name="How to Install ShareX">
+    <mxGraphModel dx="1200" dy="800" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="980" pageHeight="580" background="#FFFFFF">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+
+        <!-- Title Block -->
+        <mxCell id="title" value="&lt;div style=&quot;font-family: SkylineSans, Inter, Segoe UI, sans-serif;&quot;&gt;&lt;span style=&quot;font-size: 22px; font-weight: 700; color: #111827;&quot;&gt;ShareX Screenshot Setup — How to Install&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot;font-size: 13px; color: #4B5563;&quot;&gt;Two easy ways for colleagues to get the exact same setup in under a minute&lt;/span&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="20" width="900" height="50" as="geometry"/>
+        </mxCell>
+
+        <!-- Column 1: AI Prompt Setup -->
+        <mxCell id="col1_card" value="" style="rounded=1;arcSize=6;fillColor=#EFF6FF;strokeColor=#BFDBFE;strokeWidth=1.5;html=1;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="40" y="80" width="435" height="340" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="col1_header" value="&lt;div style=&quot;font-family: Inter, Segoe UI, sans-serif; text-align: left;&quot;&gt;&lt;span style=&quot;background-color: #2563EB; color: #FFFFFF; padding: 2px 7px; border-radius: 4px; font-size: 10px; font-weight: 700; letter-spacing: 0.5px;&quot;&gt;RECOMMENDED&lt;/span&gt;&lt;div style=&quot;font-size: 17px; font-weight: 700; color: #1E3A8A; margin-top: 6px; font-family: SkylineSans, Inter;&quot;&gt;Path 1: One-Prompt AI Setup&lt;/div&gt;&lt;div style=&quot;font-size: 12px; color: #3B82F6; margin-top: 2px;&quot;&gt;Zero hassle • Takes ~30 seconds • Runs with Gemini 3.8 Flash High&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="58" y="95" width="400" height="65" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="col1_step1" value="&lt;div style=&quot;font-family: Inter, Segoe UI, sans-serif; text-align: left;&quot;&gt;&lt;b style=&quot;color: #111827; font-size: 13px;&quot;&gt;1. Open an AI agent&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;color: #4B5563; font-size: 11px;&quot;&gt;GitHub Copilot Chat (agent mode), Copilot CLI, or Claude Code&lt;/span&gt;&lt;/div&gt;" style="rounded=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#DBEAFE;strokeWidth=1;html=1;align=left;spacingLeft=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="58" y="165" width="400" height="52" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="col1_step2" value="&lt;div style=&quot;font-family: Inter, Segoe UI, sans-serif; text-align: left;&quot;&gt;&lt;b style=&quot;color: #111827; font-size: 13px;&quot;&gt;2. Paste the prompt from PROMPT.md&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;color: #4B5563; font-size: 11px;&quot;&gt;Copy the 5-step block from the repo and send it to the agent&lt;/span&gt;&lt;/div&gt;" style="rounded=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#DBEAFE;strokeWidth=1;html=1;align=left;spacingLeft=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="58" y="227" width="400" height="52" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="col1_step3" value="&lt;div style=&quot;font-family: Inter, Segoe UI, sans-serif; text-align: left;&quot;&gt;&lt;b style=&quot;color: #111827; font-size: 13px;&quot;&gt;3. Agent runs the setup script&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;color: #4B5563; font-size: 11px;&quot;&gt;Backs up settings, installs via winget if missing, sets 4 hotkeys &amp;amp; 35 frames&lt;/span&gt;&lt;/div&gt;" style="rounded=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#DBEAFE;strokeWidth=1;html=1;align=left;spacingLeft=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="58" y="289" width="400" height="54" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="col1_done" value="&lt;div style=&quot;font-family: Inter, Segoe UI, sans-serif; text-align: center;&quot;&gt;&lt;b style=&quot;color: #15803D; font-size: 12px;&quot;&gt;✓ Ready in ~30s — prints backup path &amp;amp; hotkeys&lt;/b&gt;&lt;/div&gt;" style="rounded=1;arcSize=8;fillColor=#DCFCE7;strokeColor=#86EFAC;strokeWidth=1;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="58" y="353" width="400" height="34" as="geometry"/>
+        </mxCell>
+
+        <!-- Column 2: Manual PowerShell Setup -->
+        <mxCell id="col2_card" value="" style="rounded=1;arcSize=6;fillColor=#F9FAFB;strokeColor=#E5E7EB;strokeWidth=1.5;html=1;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="505" y="80" width="435" height="340" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="col2_header" value="&lt;div style=&quot;font-family: Inter, Segoe UI, sans-serif; text-align: left;&quot;&gt;&lt;span style=&quot;background-color: #4B5563; color: #FFFFFF; padding: 2px 7px; border-radius: 4px; font-size: 10px; font-weight: 700; letter-spacing: 0.5px;&quot;&gt;MANUAL / TERMINAL&lt;/span&gt;&lt;div style=&quot;font-size: 17px; font-weight: 700; color: #111827; margin-top: 6px; font-family: SkylineSans, Inter;&quot;&gt;Path 2: Windows PowerShell&lt;/div&gt;&lt;div style=&quot;font-size: 12px; color: #6B7280; margin-top: 2px;&quot;&gt;No AI needed • Standard built-in PowerShell 5.1 • Takes ~1 min&lt;/div&gt;&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="523" y="95" width="400" height="65" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="col2_step1" value="&lt;div style=&quot;font-family: Inter, Segoe UI, sans-serif; text-align: left;&quot;&gt;&lt;b style=&quot;color: #111827; font-size: 13px;&quot;&gt;1. Open Windows PowerShell&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;color: #4B5563; font-size: 11px;&quot;&gt;Press Win+R, type &lt;code style=&quot;background: #F3F4F6; padding: 1px 4px; border-radius: 3px;&quot;&gt;powershell&lt;/code&gt;, and press Enter&lt;/span&gt;&lt;/div&gt;" style="rounded=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#E5E7EB;strokeWidth=1;html=1;align=left;spacingLeft=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="523" y="165" width="400" height="52" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="col2_step2" value="&lt;div style=&quot;font-family: Inter, Segoe UI, sans-serif; text-align: left;&quot;&gt;&lt;b style=&quot;color: #111827; font-size: 13px;&quot;&gt;2. Run the one-line setup command&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;color: #2563EB; font-size: 11px; font-family: Consolas, monospace;&quot;&gt;powershell.exe -ExecutionPolicy Bypass -File .\Setup-ShareX.ps1&lt;/span&gt;&lt;/div&gt;" style="rounded=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#E5E7EB;strokeWidth=1;html=1;align=left;spacingLeft=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="523" y="227" width="400" height="52" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="col2_step3" value="&lt;div style=&quot;font-family: Inter, Segoe UI, sans-serif; text-align: left;&quot;&gt;&lt;b style=&quot;color: #111827; font-size: 13px;&quot;&gt;3. Script runs safely &amp;amp; idempotently&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;color: #4B5563; font-size: 11px;&quot;&gt;Installs via winget if missing, verifies writes, leaves other hotkeys untouched&lt;/span&gt;&lt;/div&gt;" style="rounded=1;arcSize=8;fillColor=#FFFFFF;strokeColor=#E5E7EB;strokeWidth=1;html=1;align=left;spacingLeft=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="523" y="289" width="400" height="54" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="col2_done" value="&lt;div style=&quot;font-family: Inter, Segoe UI, sans-serif; text-align: center;&quot;&gt;&lt;b style=&quot;color: #374151; font-size: 12px;&quot;&gt;✓ Exact same verified result &amp;amp; timestamped backup&lt;/b&gt;&lt;/div&gt;" style="rounded=1;arcSize=8;fillColor=#F3F4F6;strokeColor=#D1D5DB;strokeWidth=1;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="523" y="353" width="400" height="34" as="geometry"/>
+        </mxCell>
+
+        <!-- Bottom Box: Outcome Details -->
+        <mxCell id="outcome_card" value="" style="rounded=1;arcSize=6;fillColor=#172554;strokeColor=#1E3A8A;strokeWidth=1;html=1;fontFamily=Inter;" vertex="1" parent="1">
+          <mxGeometry x="40" y="435" width="900" height="115" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="outcome_title" value="&lt;div style=&quot;font-family: SkylineSans, Inter; text-align: center; color: #93C5FD; font-size: 11px; font-weight: 700; letter-spacing: 0.8px;&quot;&gt;WHAT GETS CONFIGURED AUTOMATICALLY (EITHER ROUTE)&lt;/div&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="443" width="880" height="18" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="outcome_box_left" value="&lt;div style=&quot;font-family: Inter, Segoe UI, sans-serif; text-align: left; line-height: 1.4;&quot;&gt;&lt;b style=&quot;color: #FFFFFF; font-size: 12px;&quot;&gt;4 Shortcuts Configured:&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;color: #60A5FA; font-weight: 600;&quot;&gt;Ctrl+Shift+1&lt;/span&gt;&lt;span style=&quot;color: #CBD5E1;&quot;&gt; : Region + pick frame (35 presets) + annotate&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot;color: #60A5FA; font-weight: 600;&quot;&gt;Ctrl+Shift+2&lt;/span&gt;&lt;span style=&quot;color: #CBD5E1;&quot;&gt; : Region + grey border + annotate&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot;color: #60A5FA; font-weight: 600;&quot;&gt;Ctrl+Shift+3&lt;/span&gt;&lt;span style=&quot;color: #CBD5E1;&quot;&gt; : Region + grey border → direct to clipboard &amp;amp; save&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot;color: #60A5FA; font-weight: 600;&quot;&gt;Ctrl+Shift+4&lt;/span&gt;&lt;span style=&quot;color: #CBD5E1;&quot;&gt; : Scrolling capture (long web pages or chat logs)&lt;/span&gt;&lt;/div&gt;" style="rounded=1;arcSize=6;fillColor=#1E293B;strokeColor=#334155;strokeWidth=1;html=1;align=left;spacingLeft=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="58" y="465" width="410" height="74" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="outcome_box_right" value="&lt;div style=&quot;font-family: Inter, Segoe UI, sans-serif; text-align: left; line-height: 1.4;&quot;&gt;&lt;b style=&quot;color: #FFFFFF; font-size: 12px;&quot;&gt;Clean Settings &amp;amp; Safety:&lt;/b&gt;&lt;br/&gt;&lt;span style=&quot;color: #34D399;&quot;&gt;•&lt;/span&gt;&lt;span style=&quot;color: #CBD5E1;&quot;&gt; Shutter sound &lt;b&gt;OFF&lt;/b&gt; &amp;amp; editor unsaved prompt &lt;b&gt;OFF&lt;/b&gt;&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot;color: #34D399;&quot;&gt;•&lt;/span&gt;&lt;span style=&quot;color: #CBD5E1;&quot;&gt; 35 tuned frames installed (default: Rounded grey border)&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot;color: #34D399;&quot;&gt;•&lt;/span&gt;&lt;span style=&quot;color: #CBD5E1;&quot;&gt; Auto-saves to &lt;code style=&quot;color:#94A3B8;&quot;&gt;Documents\ShareX\Screenshots\&amp;lt;yyyy-mm&amp;gt;&lt;/code&gt;&lt;/span&gt;&lt;br/&gt;&lt;span style=&quot;color: #34D399;&quot;&gt;•&lt;/span&gt;&lt;span style=&quot;color: #CBD5E1;&quot;&gt; Full timestamped backup in &lt;code style=&quot;color:#94A3B8;&quot;&gt;Backup\SetupBackup_...&lt;/code&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=1;arcSize=6;fillColor=#1E293B;strokeColor=#334155;strokeWidth=1;html=1;align=left;spacingLeft=12;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="480" y="465" width="445" height="74" as="geometry"/>
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
